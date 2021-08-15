@@ -186,7 +186,7 @@ header{
     align-items: center;
     justify-content: center;
     height: 90vh;
-    background: url(./affiche.png);
+    background: url(./img/affiche.png);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 500px;
@@ -246,7 +246,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(./affiche.png);
+    background: url(./img/affiche.png);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
