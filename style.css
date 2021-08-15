@@ -1,0 +1,533 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+
+}
+
+@font-face{
+    font-family: hamurz;
+    src: url(./hamurz.ttf);
+}
+
+/*------------------------------------Navigation------------------------------------*/
+nav{
+    background: #290A97;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 3px rgba(0,0,0, 0.5);
+    position: fixed;
+    width: 100%;
+  }
+  nav:after{
+    content: '';
+    clear: both;
+    display: table;
+  }
+  nav .logo{
+    float: left;
+    color: #EAF205;
+    font-size: 27px;
+    line-height: 70px;
+    padding-left: 40px;
+    font-family: 'Abril Fatface';
+    text-transform: none;  
+
+  }
+  nav img{
+    margin: 5px;
+  }
+  nav ul{
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+    font-family: 'Raleway';
+  }
+  nav ul li{
+    float: left;
+    background: #290A97;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+  nav ul li a:hover{
+    color: #EAF205;  
+  }
+
+  nav ul ul li a:hover{
+    box-shadow: none;
+  }
+  nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #EAF205;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+  }
+  nav ul ul ul{
+    border-top: none;
+  }
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 210px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid #EAF205;
+  }
+  nav ul ul li a{
+    line-height: 60px;
+    font-size: 14px;
+  }
+  .show,.icon,input{
+    display: none;
+  }
+  .fa-plus{
+    font-size: 15px;
+    margin-left: 40px;
+  }
+
+  i{
+      padding: 5px;
+  }
+
+  .logo a{
+    color: white;
+    text-decoration: none;
+  }
+  .logo a:hover{
+    color: #EAF205;
+  }
+  @media all and (max-width: 968px) {
+    nav ul{
+      margin-right: 0px;
+      float: left;
+    }
+    nav .logo{
+      padding-left: 30px;
+      width: 100%;
+    }
+    .show + a, ul{
+      display: none;
+    }
+    nav ul li,nav ul ul li{
+      display: block;
+      width: 100%;
+    }
+    nav ul li a:hover{
+      box-shadow: none;
+    }
+    .show{
+      display: block;
+      color: white;
+      font-size: 18px;
+      padding: 0 20px;
+      line-height: 70px;
+      cursor: pointer;
+    }
+    .show:hover{
+      color: #EAF205;
+    }
+    .icon{
+      display: block;
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 40px;
+      line-height: 70px;
+      cursor: pointer;
+      font-size: 25px;
+    }
+    nav ul ul{
+      top: 70px;
+      border-top: 0px;
+      float: none;
+      position: static;
+      display: none;
+      opacity: 1;
+      visibility: visible;
+    }
+    nav ul ul a{
+      padding-left: 40px;
+    }
+    nav ul ul ul a{
+      padding-left: 80px;
+    }
+    nav ul ul ul li{
+      position: static;
+    }
+    [id^=btn]:checked + ul{
+      display: block;
+    }
+    nav ul ul li{
+      border-bottom: 0px;
+    }
+    span.cancel:before{
+      content: '\f00d';
+    }
+  }
+
+/*------------------------------Header------------------------------------------*/
+  
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: url(./affiche.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.contenu h1{
+    font-size: 100px;
+    text-align: center;
+    font-family: hamurz;
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 3px rgba(0,0,0, 0.5);;
+}
+
+.contenu h2{
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 3px rgba(0,0,0, 0.5);
+
+}
+
+.contenu p{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 3px rgba(0,0,0, 0.5);
+    font-weight: 700;
+}
+
+
+.apropos{
+    margin: 5% 7% 5% 7%;
+
+}
+.apropos h3{
+    color: #1b2f38;
+    font-size: 30px;
+    font-family: 'Abril Fatface';
+    
+}
+
+.apropos p{
+    font-size: 18px;
+    padding: 10px;
+    font-family: 'Raleway';
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./affiche.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 100px;
+
+}
+.sept4, .sept5{
+    background: #290A97;
+    text-align: center;
+    padding: 18px;
+    border-radius: 50px 0 50px 0;
+    height: 110px;
+    width: 150px;
+    margin: 7%;
+    cursor: pointer;
+    box-shadow: 2px 4px 0px #EAF205;
+    font-family: 'Raleway';
+  
+}
+
+
+
+
+.sept4 a, .sept5 a{
+    text-decoration: none;
+    color: white;
+}
+
+.sept4 h3, .sept5 h3{
+    font-size: 25px;
+    color: #EAF205;;
+}
+/*-------------------------------------Footer-------------------------------------*/
+footer{
+    background: #EBE510;
+    height: 160px;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    font-size: 20px;
+    padding: 30px;
+    font-family: 'Raleway';
+    font-weight: 500;
+    text-align: center;
+    color: black;
+}
+
+.contact{
+  padding: 0 15% 0 6%;
+}
+footer i{
+  padding: 0 10px 0 10px;
+}
+footer i:hover{
+  color: aqua;
+}
+
+footer p{
+  color: #290A97;
+}
+
+
+
+.rights{
+  background-color: #EBE510;
+  color: #290A97;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*------------------------------Samedi 4 septembre--------------------------------*/
+
+.programme{
+  font-family: 'Raleway';
+  margin: 0 5% 0 5%;
+  padding: 10% 2% 5% 2%;
+  border-right: solid #981CB7;
+  border-left: solid #981CB7;
+}
+
+.programme h2, .programme h3{
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  color: #290A97;
+  font-family: hamurz;
+}
+
+.programme h4{
+  color: #971CB7;
+  font-family: 'Raleway';
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.programme strong{
+  font-size: 35px;
+  color: #290A97;
+}
+
+.programme img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+
+}
+
+.cine a{
+  color:#290A97;
+  text-align: center;
+  padding: 10px;
+  display: block; 
+  font-size: 20px;
+  
+}
+
+
+button{
+  border-radius: 10px;
+  border: none;
+  background: #290A97;
+  
+}
+
+button:hover{
+  background: #971CB7;
+}
+
+.epopee, .concert, .cine, .electro{
+  padding: 40px;
+}
+
+
+/*-----------------------------Dimanche 5 Septembre------------------------------*/
+.programme{
+  text-align: center;
+}
+
+.videgrenier, .yoga, .cafephilo, .repas, .sieste, .troc, .apero, .after{
+  padding: 30px;
+}
+
+.apero li{
+  list-style: none;
+  color:  #290A97;
+  padding: 5px;
+  font-weight: bold;
+  
+}
+
+.apero li p{
+  color: black;
+  font-weight: normal;
+}
+
+.after p{
+  color: #290A97;
+  font-weight: bold;
+}
+
+.sieste h6{
+  color: #290A97;
+  font-size: 18px;
+}
+
+
+@media screen and (max-width: 900px){
+    header{
+        height: 60vh;
+    }
+    header .contenu h1{
+        font-size: 60px;
+    }
+    header .contenu h2{
+        font-size: 40px;
+    }
+    header .contenu p{
+        font-size: 20px;
+    }
+    footer{
+      display: block;
+      flex-direction: column;
+      height: 420px;
+    }
+
+    .plan{
+      padding: 0 0 20px 0;
+    }
+    .contact{
+      padding: 20px 0 20px 0;
+      border-top: solid 2px #290A97;
+      border-bottom: solid 2px #290A97;
+    }
+    .social{
+      padding: 20px 0 20px 0;
+    }
+    
+    .programme{
+      margin: 0;
+    }
+}   
+
+
+@media screen and (max-width: 375px){
+    header{
+        height: 80vh;
+    }
+    header .contenu h1{
+        font-size: 50px;
+    }
+    header .contenu h2{
+        font-size: 30px;
+    }
+    header .contenu p{
+        font-size: 20px;
+    }
+    .apropos p{
+        font-size: 16px;
+        padding: 3%;
+    }
+    footer{
+      display: block;
+      flex-direction: column;
+      height: 370px;
+      font-size: 16px;
+    }
+    .plan{
+      padding: 0 0 20px 0;
+    }
+    .contact{
+      padding: 20px 0 20px 0;
+      border-top: solid 2px #290A97;
+      border-bottom: solid 2px #290A97;
+    }
+    .social{
+      padding: 20px 0 20px 0;
+    }
+
+    .programme{
+      font-size: 16px;
+      margin: 0;
+      padding: 25% 5% 5% 5%;
+      text-align: left;
+    }
+    .programme h2, .programme h3{
+      padding: 10px;
+      font-size: 30px;
+      
+    }
+
+    .programme strong{
+      font-size: 20px;
+    }
+
+    .cine{
+      display: block;
+      flex-direction: column;
+    }
+
+    .cine img{
+      width: 350px;
+      
+    }
+
+    .cine a{
+      font-size: 18px;
+    }
+
+    .epopee, .concert, .cine, .electro{
+      padding: 20px;
+    }
+
+    .videgrenier, .yoga, .cafephilo, .repas, .sieste, .troc, .apero, .after{
+      padding: 20px;
+    }
+
+}
+
+
