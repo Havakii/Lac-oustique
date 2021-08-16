@@ -104,11 +104,11 @@ nav{
   }
 
   .logo a{
-    color: white;
+    color: #EAF205;
     text-decoration: none;
   }
   .logo a:hover{
-    color: #EAF205;
+    color: white;
   }
   @media all and (max-width: 968px) {
     nav ul{
@@ -417,6 +417,16 @@ button:hover{
   font-size: 18px;
 }
 
+/*----------------------------------Infos-----------------------------------------*/
+iframe{
+ margin: 20px;
+ box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.infos h4{
+  font-weight: normal;
+
+}
 
 @media screen and (max-width: 900px){
     header{
@@ -498,7 +508,7 @@ button:hover{
     }
     .programme h2, .programme h3{
       padding: 10px;
-      font-size: 30px;
+      font-size: 40px;
       
     }
 
@@ -526,6 +536,18 @@ button:hover{
 
     .videgrenier, .yoga, .cafephilo, .repas, .sieste, .troc, .apero, .after{
       padding: 20px;
+    }
+
+    iframe{
+      width: 300px;
+      height: 200px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .infos h4{
+      font-size: 18px;
     }
 
 }
